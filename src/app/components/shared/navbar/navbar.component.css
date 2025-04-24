@@ -1,0 +1,39 @@
+/* Navbar styles with Tailwind */
+
+/* Search Animation */
+.w-0 {
+  width: 0;
+}
+
+.w-64 {
+  width: 16rem;
+}
+
+.transition-all {
+  transition-property: all;
+}
+
+.duration-300 {
+  transition-duration: 300ms;
+}
+
+.ease-in-out {
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.opacity-0 {
+  opacity: 0;
+}
+
+.opacity-100 {
+  opacity: 1;
+}
+
+/* Make sure the search input doesn't collapse immediately */
+input.opacity-0 {
+  transition: opacity 200ms ease-in-out;
+}
+
+input.opacity-100 {
+  transition: opacity 200ms ease-in-out 100ms; /* Small delay for better effect */
+}
