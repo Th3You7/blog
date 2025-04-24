@@ -1,0 +1,48 @@
+{
+  "users": [
+    {
+      "id": 1,
+      "email": "admin@example.com",
+      "password": "admin123",
+      "name": "Admin User"
+    }
+  ],
+  "articles": [
+    {
+      "id": 1,
+      "title": "Getting Started with Angular",
+      "content": "Angular is a platform for building mobile and desktop web applications...",
+      "category": "Angular",
+      "authorId": 1,
+      "createdAt": "2023-01-15T09:30:00.000Z",
+      "updatedAt": "2023-01-15T09:30:00.000Z"
+    },
+    {
+      "id": 2,
+      "title": "Tailwind CSS Basics",
+      "content": "Tailwind CSS is a utility-first CSS framework...",
+      "category": "CSS",
+      "authorId": 1,
+      "createdAt": "2023-01-20T11:45:00.000Z",
+      "updatedAt": "2023-01-20T11:45:00.000Z"
+    }
+  ],
+  "categories": [
+    {
+      "id": 1,
+      "name": "Angular"
+    },
+    {
+      "id": 2,
+      "name": "CSS"
+    },
+    {
+      "id": 3,
+      "name": "JavaScript"
+    },
+    {
+      "id": 4,
+      "name": "TypeScript"
+    }
+  ]
+}
