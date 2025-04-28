@@ -1,0 +1,40 @@
+{
+  "articles": [
+    {
+      "id": 1,
+      "title": "First Blog Post",
+      "content": "This is the content of the first blog post.",
+      "author": "John Doe",
+      "date": "2024-03-20",
+      "tags": [
+        "introduction",
+        "blog"
+      ]
+    },
+    {
+      "title": "SCSS for styling",
+      "content": "SCSS (Sassy Cascading Style Sheets) is one of two syntaxes for the popular CSS preprocessor Sass (Syntactically Awesome Style Sheets). ",
+      "category": "CSS",
+      "id": "be3c",
+      "authorId": 1,
+      "updatedAt": "2025-04-28T10:27:58.794Z"
+    }
+  ],
+  "users": [
+    {
+      "id": 1,
+      "username": "johndoe",
+      "name": "John Doe",
+      "email": "john@example.com"
+    }
+  ],
+  "comments": [
+    {
+      "id": 1,
+      "postId": 1,
+      "userId": 1,
+      "content": "Great first post!",
+      "date": "2024-03-20"
+    }
+  ]
+}

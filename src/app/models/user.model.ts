@@ -3,6 +3,6 @@ export interface User {
   email: string;
   password?: string; // Optional in responses
   name: string;
-  role?: 'user' | 'admin'; // Role for authorization
+  //role?: 'user' | 'admin'; // Role for authorization
   createdAt?: string;
 }
