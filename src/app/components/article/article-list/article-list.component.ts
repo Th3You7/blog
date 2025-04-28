@@ -10,10 +10,10 @@ import { FormsModule } from '@angular/forms';
   standalone: true,
   imports: [CommonModule, RouterModule, FormsModule],
   templateUrl: './article-list.component.html',
-  styleUrls: ['./article-list.component.css'],
 })
 export class ArticleListComponent implements OnInit {
   articles: Article[] = [];
+  comments: Comment[] = [];
   filteredArticles: Article[] = [];
   isLoading: boolean = false;
   errorMessage: string | null = null;
@@ -39,6 +39,14 @@ export class ArticleListComponent implements OnInit {
         this.errorMessage = 'Failed to load articles. Please try again later.';
         console.error('Error loading articles:', error);
         this.isLoading = false;
+      },
+    });
+  }
+
+  loadComments(): void {
+    this.articleService.getComments().subscribe({
+      next: (comments) => {
+        this.comments = comments;
       },
     });
   }

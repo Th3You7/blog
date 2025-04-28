@@ -15,7 +15,6 @@ import { ArticleService } from '../../../services/article.service';
   standalone: true,
   imports: [CommonModule, FormsModule, ReactiveFormsModule],
   templateUrl: './article-add.component.html',
-  styleUrls: ['./article-add.component.css'],
 })
 export class ArticleAddComponent {
   articleForm: FormGroup;

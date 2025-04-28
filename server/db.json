@@ -1,48 +1,40 @@
 {
-  "users": [
-    {
-      "id": 1,
-      "email": "admin@example.com",
-      "password": "admin123",
-      "name": "Admin User"
-    }
-  ],
   "articles": [
     {
       "id": 1,
-      "title": "Getting Started with Angular",
-      "content": "Angular is a platform for building mobile and desktop web applications...",
-      "category": "Angular",
-      "authorId": 1,
-      "createdAt": "2023-01-15T09:30:00.000Z",
-      "updatedAt": "2023-01-15T09:30:00.000Z"
+      "title": "First Blog Post",
+      "content": "This is the content of the first blog post.",
+      "author": "John Doe",
+      "date": "2024-03-20",
+      "tags": [
+        "introduction",
+        "blog"
+      ]
     },
     {
-      "id": 2,
-      "title": "Tailwind CSS Basics",
-      "content": "Tailwind CSS is a utility-first CSS framework...",
+      "title": "SCSS for styling",
+      "content": "SCSS (Sassy Cascading Style Sheets) is one of two syntaxes for the popular CSS preprocessor Sass (Syntactically Awesome Style Sheets). ",
       "category": "CSS",
+      "id": "be3c",
       "authorId": 1,
-      "createdAt": "2023-01-20T11:45:00.000Z",
-      "updatedAt": "2023-01-20T11:45:00.000Z"
+      "updatedAt": "2025-04-28T10:27:58.794Z"
     }
   ],
-  "categories": [
+  "users": [
     {
       "id": 1,
-      "name": "Angular"
-    },
+      "username": "johndoe",
+      "name": "John Doe",
+      "email": "john@example.com"
+    }
+  ],
+  "comments": [
     {
-      "id": 2,
-      "name": "CSS"
-    },
-    {
-      "id": 3,
-      "name": "JavaScript"
-    },
-    {
-      "id": 4,
-      "name": "TypeScript"
+      "id": 1,
+      "postId": 1,
+      "userId": 1,
+      "content": "Great first post!",
+      "date": "2024-03-20"
     }
   ]
 }

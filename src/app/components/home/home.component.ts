@@ -10,7 +10,6 @@ import { Article } from '../../models/article.model';
   standalone: true,
   imports: [CommonModule, NavbarComponent, ArticleCardComponent],
   templateUrl: './home.component.html',
-  styleUrls: ['./home.component.css'],
 })
 export class HomeComponent implements OnInit {
   articles: Article[] = [

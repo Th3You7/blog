@@ -15,11 +15,10 @@ import { ArticleService } from '../../../services/article.service';
   standalone: true,
   imports: [CommonModule, FormsModule, ReactiveFormsModule],
   templateUrl: './article-edit.component.html',
-  styleUrls: ['./article-edit.component.css'],
 })
 export class ArticleEditComponent implements OnInit {
   articleForm: FormGroup;
-  articleId: number | null = null;
+  articleId: string | null = null;
   isLoading: boolean = false;
   isSubmitting: boolean = false;
   errorMessage: string | null = null;
@@ -39,7 +38,7 @@ export class ArticleEditComponent implements OnInit {
   }
 
   ngOnInit(): void {
-    this.articleId = Number(this.route.snapshot.paramMap.get('id'));
+    this.articleId = this.route.snapshot.paramMap.get('id');
     if (this.articleId) {
       this.loadArticle();
     } else {

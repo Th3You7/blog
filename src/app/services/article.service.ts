@@ -28,7 +28,7 @@ export class ArticleService {
     );
   }
 
-  getArticleById(id: number): Observable<Article> {
+  getArticleById(id: string): Observable<Article> {
     return this.http.get<Article>(`${this.apiUrl}/${id}`).pipe(
       tap((article) => console.log(`Fetched article id=${id}`, article)),
       catchError(this.handleError)
@@ -49,7 +49,7 @@ export class ArticleService {
     );
   }
 
-  updateArticle(id: number, article: Article): Observable<Article> {
+  updateArticle(id: string, article: Article): Observable<Article> {
     // Ensure updatedAt is set
     const updatedArticle = {
       ...article,
@@ -65,6 +65,13 @@ export class ArticleService {
   deleteArticle(id: number): Observable<void> {
     return this.http.delete<void>(`${this.apiUrl}/${id}`).pipe(
       tap((_) => console.log(`Deleted article id=${id}`)),
+      catchError(this.handleError)
+    );
+  }
+
+  getComments(): Observable<Comment[]> {
+    return this.http.get<Comment[]>(`${this.apiUrl}/comments`).pipe(
+      tap((comments) => console.log('Fetched comments:', comments)),
       catchError(this.handleError)
     );
   }
