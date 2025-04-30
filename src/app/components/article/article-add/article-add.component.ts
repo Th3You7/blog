@@ -9,6 +9,7 @@ import {
 } from '@angular/forms';
 import { Router } from '@angular/router';
 import { ArticleService } from '../../../services/article.service';
+import { AuthService } from '../../../services/auth.service';
 
 @Component({
   selector: 'app-article-add',
@@ -25,6 +26,7 @@ export class ArticleAddComponent {
   constructor(
     private fb: FormBuilder,
     private articleService: ArticleService,
+    private authService: AuthService,
     public router: Router
   ) {
     this.articleForm = this.fb.group({
@@ -46,7 +48,7 @@ export class ArticleAddComponent {
 
     const article = {
       ...this.articleForm.value,
-      authorId: 1, // This should come from your auth service
+      authorId: this.authService.getUserId(), // This should come from your auth service
     };
 
     this.articleService.createArticle(article).subscribe({
