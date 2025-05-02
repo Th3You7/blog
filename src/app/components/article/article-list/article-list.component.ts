@@ -1,9 +1,10 @@
 import { Component, OnInit } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { RouterModule } from '@angular/router';
-import { ArticleService, Article } from '../../../services/article.service';
+import { ArticleService } from '../../../services/article.service';
 import { Router } from '@angular/router';
 import { FormsModule } from '@angular/forms';
+import { Article } from '../../../models';
 
 @Component({
   selector: 'app-article-list',
@@ -51,11 +52,11 @@ export class ArticleListComponent implements OnInit {
     });
   }
 
-  editArticle(id: number): void {
+  editArticle(id: string): void {
     this.router.navigate(['/dashboard/articles/edit', id]);
   }
 
-  deleteArticle(id: number): void {
+  deleteArticle(id: string): void {
     if (confirm('Are you sure you want to delete this article?')) {
       this.isLoading = true;
       this.articleService.deleteArticle(id).subscribe({
